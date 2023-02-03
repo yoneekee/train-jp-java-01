@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Loop02",
+      "request": "launch",
+      "mainClass": "Loop02",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch Loop01",
       "request": "launch",
       "mainClass": "Loop01",
