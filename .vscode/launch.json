@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ScannerTest08",
+      "request": "launch",
+      "mainClass": "ScannerTest08",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch ScannerTest07",
+      "request": "launch",
+      "mainClass": "ScannerTest07",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Scanner07",
+      "request": "launch",
+      "mainClass": "Scanner07",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch ScannerTest06",
+      "request": "launch",
+      "mainClass": "ScannerTest06",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch ScannerTest04",
       "request": "launch",
       "mainClass": "ScannerTest04",
