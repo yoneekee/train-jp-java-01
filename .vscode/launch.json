@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ScannerTest04",
+      "request": "launch",
+      "mainClass": "ScannerTest04",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch ScannerTest01GPT",
+      "request": "launch",
+      "mainClass": "ScannerTest01GPT",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch ScannerTest03",
       "request": "launch",
       "mainClass": "ScannerTest03",
