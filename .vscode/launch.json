@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Practice01",
+      "request": "launch",
+      "mainClass": "Practice01",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Test",
+      "request": "launch",
+      "mainClass": "Test",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch DivideZeroHandling",
+      "request": "launch",
+      "mainClass": "DivideZeroHandling",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch ArrayTest02",
       "request": "launch",
       "mainClass": "ArrayTest02",
