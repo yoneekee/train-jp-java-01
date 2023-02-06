@@ -1,5 +1,3 @@
-//import java.util.Random;
-import java.io.FileReader;
 import java.util.Scanner;
 
 public class Practice01 {
@@ -176,21 +174,55 @@ public class Practice01 {
 
     // 13
     int hund[] = new int[99];
-    for (int i = 1; i < 99; i++) {
-      hund[i] = (i + 1);
+    for (int i = 1; i < 100; i++) {
+      hund[i - 1] = i;
     }
 
     for (int i = 0; i < hund.length; i++) {
       int ten = hund[i] / 10;
-      int one = hund[i] % 3;
-      if (ten % 3 == 0 && one == 0) {
-        System.out.println(hund[i] + " : 박수 짝짝");
-      } else if (ten % 3 != 0 && one == 0) {
-        System.out.println(hund[i] + " : 박수 짝");
-      } else {
-        System.out.println(hund[i] + " : ( 침묵 )");
+      int one = hund[i] - (ten * 10);
+      int check = hund[i] - ((hund[i] / 10) * 10);
+
+      if (hund[i] < 10) {
+        if (one % 3 == 0) {
+          System.out.println(hund[i] + ":박수 짝");
+        }
+      } else if (ten % 3 == 0 && one % 3 == 0) {
+        System.out.println(hund[i] + ": 박수 짝짝");
+      } else if (ten % 3 != 0 && one % 3 == 0 && check != 0) {
+        System.out.println(hund[i] + ": 박수 짝");
+      } else if (ten % 3 == 0 && one % 3 != 0) {
+        System.out.println(hund[i] + ": 박수 짝");
       }
     }
+
+    // 14
+    /*String[] course = { "Java", "C++", "HTML5", "컴퓨터구조", "안드로이드" };
+    int[] score = { 95, 88, 76, 62, 55 };
+
+    System.out.print("검색할 과목 >>> ");
+    String search = sc.next();
+
+    for (int i = 0; i < course.length; i++) {
+      if (search.equals(course[i])) {
+        System.out.println(search + "의 성적 : " + score[i]);
+        break;
+      } else {
+        System.out.println("그런 과목은 없습니다.");
+        break;
+      }
+    }*/
+
+    // 15
+    /*try {
+      System.out.println("곱하고자 하는 두 수를 입력");
+      int num1 = sc.nextInt();
+      int num2 = sc.nextInt();
+      System.out.println("num1 x num2 = " + (num1 * num2));
+    } catch (Exception e) {
+      System.out.println(e.getMessage() + e.getStackTrace());
+    }
+  */
     sc.close();
   }
 }
