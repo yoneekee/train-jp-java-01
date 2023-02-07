@@ -2,7 +2,18 @@ package Practice;
 
 public class TV {
 
-  private int size;
+  public String maker;
+  public int year;
+  public int size;
+
+  public TV(String maker, int year, int size) {
+    this.maker = maker;
+    this.year = year;
+    this.size = size;
+  }
+}
+/*
+ * private int size;
   private String manufacturer;
 
   public TV(int size, String manufacturer) {
@@ -23,4 +34,5 @@ public class TV {
     //this.manufacturer = manufacturer;
     this(32, manufacturer);
   }
-}
+*
+*/

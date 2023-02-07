@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Circle",
+      "request": "launch",
+      "mainClass": "Circle",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch Practice01",
       "request": "launch",
       "mainClass": "Practice01",

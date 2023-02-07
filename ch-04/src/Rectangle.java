@@ -19,8 +19,8 @@ public class Rectangle {
   }
 
   public static void main(String[] args) {
-    Circle circle = new Circle(10);
-    System.out.println("원의 둘레 : " + circle.radius);
+    //Circle circle = new Circle(10);
+    //System.out.println("원의 둘레 : " + circle.radius);
 
     Rectangle rec = new Rectangle();
     rec.width = 10;
