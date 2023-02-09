@@ -9,31 +9,36 @@ class StringStack implements Stack {
 
   public StringStack(int capacity) {
     element = new String[capacity];
-    //end = -1;
-    end = 0;
+    end = -1;
   }
 
   public int length() {
-    return 1;
+    return end + 1;
   }
 
   public int capacity() {
-    return 1;
+    return element.length;
   }
 
   public String pop() {
-    return "";
+    if (end == -1) {
+      return null;
+    } else {
+      String popStr = element[end];
+      end--;
+      return popStr;
+    }
   }
 
   public boolean push(String val) {
     if (end == element.length - 1) {
-      // Stack이 가득 찼으면
       return false;
     } else {
+      end++; //-1
       element[end] = val;
-      end++;
+      //System.out.println("end===" + end);
+      return true;
     }
-    return true;
   }
 }
 
@@ -58,9 +63,18 @@ public class StackApp {
       boolean response = ss.push(str);
 
       if (response == false) {
-        System.out.println("스택이 가득차서 종료합니다.");
+        System.out.println("***스택이 이미 가득 차서 종료합니다.***");
         break;
       }
+      // System.out.println(
+      //   "capacity : " + ss.capacity() + "// length : " + ss.length()
+      // );
+    }
+
+    int total = ss.length();
+    for (int i = 0; i < total; i++) {
+      System.out.println("위에서부터 stack 출력 : " + ss.pop());
+      //System.out.println(i);
     }
 
     sc.close();
