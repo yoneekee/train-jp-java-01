@@ -6,6 +6,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Practice07",
+      "request": "launch",
+      "mainClass": "Practice.Practice07",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice06",
+      "request": "launch",
+      "mainClass": "Practice.Practice06",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice05",
+      "request": "launch",
+      "mainClass": "Practice.Practice05",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice04",
+      "request": "launch",
+      "mainClass": "Practice.Practice04",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Homepage",
+      "request": "launch",
+      "mainClass": "Homepage",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch sdsdgsggs",
+      "request": "launch",
+      "mainClass": "sdsdgsggs",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch Gambling2",
       "request": "launch",
       "mainClass": "Gambling2",

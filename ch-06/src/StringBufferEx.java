@@ -19,11 +19,14 @@ public class StringBufferEx {
     System.out.println(sb);
 
     String query = "name=kitae&addr=seoul&age=21";
+
     StringTokenizer st = new StringTokenizer(query, "&"); // 쿼리를 &기준으로 잘라서 객체로 보관하겠다
+
     while (st.hasMoreTokens()) {
       System.out.print(st.nextToken() + "\t");
     }
     System.out.println();
+
     for (int i = 0; i < st.countTokens(); i++) {
       System.out.print(st.nextToken() + "\t");
     }
