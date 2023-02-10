@@ -1,5 +1,6 @@
 package Practice;
 
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -54,15 +55,16 @@ class WordQuiz {
 
     while (true) {
       // 난수가 중복없이 4개 저장되는 정수 배열 (1-17 중에서 4개 골라서)
-      int[] seventeen = new int[17];
-
-      for (int i = 0; i < 17; i++) {
-        seventeen[i] = i;
-      }
+      // int[] seventeen = new int[17];
+      // for (int i = 0; i < 17; i++) {
+      //   seventeen[i] = i;
+      // }
 
       int[] select = new int[4];
+      Random random = new Random();
       for (int i = 0; i < 4; i++) {
-        select[i] = seventeen[(int) (Math.random() * 17)];
+        //select[i] = seventeen[(int) (Math.random() * 17)];
+        select[i] = random.nextInt(17);
         for (int j = 0; j < i; j++) {
           if (select[i] == select[j]) {
             i--;
