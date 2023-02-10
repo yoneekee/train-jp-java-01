@@ -6,12 +6,13 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 class Location {
 
   private String cityName;
-  private String latitude;
-  private String longitude;
+  private Double latitude;
+  private Double longitude;
 
   public String getCityName() {
     return this.cityName;
@@ -21,40 +22,48 @@ class Location {
     this.cityName = cityName;
   }
 
-  public String getLatitude() {
+  public Double getLatitude() {
     return this.latitude;
   }
 
-  public void setLatitude(String latitude) {
+  public void setLatitude(Double latitude) {
     this.latitude = latitude;
   }
 
-  public String getLongitude() {
+  public Double getLongitude() {
     return this.longitude;
   }
 
-  public void setLongitude(String longitude) {
+  public void setLongitude(Double longitude) {
     this.longitude = longitude;
   }
 }
 
-public class Practice06 {
+class locationManager {
 
-  public static void main(String[] args) {
-    HashMap<String, Location> locations = new HashMap<>();
-    Scanner sc = new Scanner(System.in);
+  Location lc;
+  HashMap<String, Location> locations = new HashMap<>();
+  Scanner sc = new Scanner(System.in);
 
-    for (int i = 0; i < 4; i++) {
-      Location lc = new Location();
+  public void insertLocation(int num) {
+    for (int i = 0; i < num; i++) {
+      lc = new Location();
       System.out.print("도시이름, 위도, 경도를 입력하세요 >>>> ");
       String loca = sc.nextLine();
-      String[] location = loca.split(", ");
-      lc.setCityName(location[0]);
-      lc.setLatitude(location[1]);
-      lc.setLongitude(location[2]);
+      //String[] location = loca.split(", ");
+      StringTokenizer st = new StringTokenizer(loca, ",");
+
+      String cityName = st.nextToken().trim();
+      String latitude = st.nextToken().trim();
+      String longitude = st.nextToken().trim();
+      lc.setCityName(cityName);
+      lc.setLatitude(Double.parseDouble(latitude));
+      lc.setLongitude(Double.parseDouble(longitude));
       locations.put(lc.getCityName(), lc);
     }
+  }
 
+  public void showAll() {
     Iterator<Map.Entry<String, Location>> iteratorE = locations
       .entrySet()
       .iterator();
@@ -69,7 +78,9 @@ public class Practice06 {
       );
     }
     System.out.println("-------------");
+  }
 
+  public void showInfo() {
     while (true) {
       System.out.print("도시 이름 >>> ");
       String search = sc.next();
@@ -84,6 +95,20 @@ public class Practice06 {
         System.out.println("그런 나라 없음.");
       }
     }
+  }
+}
+
+public class Practice06 {
+
+  public static void main(String[] args) {
+    //HashMap<String, Location> locations = new HashMap<>();
+    Scanner sc = new Scanner(System.in);
+    locationManager lm = new locationManager();
+
+    lm.insertLocation(4);
+    lm.showAll();
+    lm.showInfo();
+
     sc.close();
   }
 }
