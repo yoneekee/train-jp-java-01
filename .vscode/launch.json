@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Practice11",
+      "request": "launch",
+      "mainClass": "practice.Practice11",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice10",
+      "request": "launch",
+      "mainClass": "Practice.Practice10",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch Practice07",
       "request": "launch",
       "mainClass": "Practice.Practice07",

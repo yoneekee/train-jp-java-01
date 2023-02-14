@@ -96,6 +96,9 @@ class WordQuiz {
 
       if (selectAnswer == -1) {
         break;
+      } else if (selectAnswer < 0 || selectAnswer > 4) {
+        System.out.println("** 주의 : 올바르지 않은 값 입력.\n");
+        continue;
       }
 
       Word wordResult = vec.get(select[selectAnswer - 1]);
