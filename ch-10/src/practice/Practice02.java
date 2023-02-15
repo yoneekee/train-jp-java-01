@@ -7,7 +7,6 @@ import javax.swing.*;
 public class Practice02 extends JFrame {
 
   JLabel label = new JLabel("Love Java");
-  Container contentPane = this.getContentPane();
 
   // 인터페이스는 이중상속(구현) 가능
   class MyMouseListener implements MouseListener, MouseMotionListener {
@@ -17,6 +16,7 @@ public class Practice02 extends JFrame {
     public void mousePressed(MouseEvent e) {}
 
     public void mouseReleased(MouseEvent e) {
+      Container contentPane = (Container) e.getSource();
       contentPane.setBackground(Color.GREEN);
     }
 
@@ -25,6 +25,7 @@ public class Practice02 extends JFrame {
     public void mouseExited(MouseEvent e) {}
 
     public void mouseDragged(MouseEvent e) {
+      Container contentPane = (Container) e.getSource();
       contentPane.setBackground(Color.YELLOW);
     }
 
@@ -32,6 +33,8 @@ public class Practice02 extends JFrame {
   }
 
   public Practice02() {
+    Container contentPane = this.getContentPane();
+
     this.setTitle("All Mouse Event");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

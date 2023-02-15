@@ -25,7 +25,7 @@ public class Practice07 extends JFrame {
 
           if (n < 0 && size > 10) {
             label.setFont(new Font("Arial", Font.PLAIN, size - 5));
-          } else if (n > 0 && size < 84) {
+          } else if (n > 0 && size < 168) {
             label.setFont(new Font("Arial", Font.PLAIN, size + 5));
           }
         }
