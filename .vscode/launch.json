@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch KeyListenerEx",
+      "request": "launch",
+      "mainClass": "KeyListenerEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch MouseAdapterEx",
       "request": "launch",
       "mainClass": "MouseAdapterEx",
