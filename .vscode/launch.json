@@ -6,6 +6,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Practice04",
+      "request": "launch",
+      "mainClass": "practice.Practice04",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice03",
+      "request": "launch",
+      "mainClass": "practice.Practice03",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice02",
+      "request": "launch",
+      "mainClass": "practice.Practice02",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice01",
+      "request": "launch",
+      "mainClass": "practice.Practice01",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch GamblingSwing",
+      "request": "launch",
+      "mainClass": "GamblingSwing",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch MouseListenerAllEx",
+      "request": "launch",
+      "mainClass": "MouseListenerAllEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch MouseDoubleClickEx",
+      "request": "launch",
+      "mainClass": "MouseDoubleClickEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch MovingHello",
       "request": "launch",
       "mainClass": "practice.MovingHello",
