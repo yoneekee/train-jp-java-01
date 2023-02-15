@@ -6,6 +6,118 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch MouseAdapterEx",
+      "request": "launch",
+      "mainClass": "MouseAdapterEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch MouseEventEx",
+      "request": "launch",
+      "mainClass": "MouseEventEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch AnonymousClassListener",
+      "request": "launch",
+      "mainClass": "AnonymousClassListener",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch SwingGugudanEvent",
+      "request": "launch",
+      "mainClass": "ETC.SwingGugudanEvent",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch IndependentClassListener",
+      "request": "launch",
+      "mainClass": "IndependentClassListener",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch SwingGugudanEvent",
+      "request": "launch",
+      "mainClass": "SwingGugudanEvent",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch DownloadWorkerThread",
+      "request": "launch",
+      "mainClass": "DownloadWorkerThread",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch GugudanSwing",
+      "request": "launch",
+      "mainClass": "GugudanSwing",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice08",
+      "request": "launch",
+      "mainClass": "Practice.Practice08",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice03",
+      "request": "launch",
+      "mainClass": "Practice.Practice03",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch NullLayoutEx",
+      "request": "launch",
+      "mainClass": "NullLayoutEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice01",
+      "request": "launch",
+      "mainClass": "Practice.Practice01",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch GridLayoutEx",
+      "request": "launch",
+      "mainClass": "GridLayoutEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch BorderLayoutEx",
+      "request": "launch",
+      "mainClass": "BorderLayoutEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch FlowLayoutEx",
+      "request": "launch",
+      "mainClass": "FlowLayoutEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch MyFrame",
+      "request": "launch",
+      "mainClass": "MyFrame",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch Practice11",
       "request": "launch",
       "mainClass": "practice.Practice11",
