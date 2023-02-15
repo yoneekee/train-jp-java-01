@@ -33,6 +33,7 @@ public class Practice03 extends JFrame {
 
     //contentPane.addMouseListener(new MyMouseListener());
     //contentPane.addMouseMotionListener(new MyMouseListener());
+
     contentPane.addKeyListener(new MyKeyListener());
     contentPane.setLayout(new FlowLayout());
     contentPane.add(label);
