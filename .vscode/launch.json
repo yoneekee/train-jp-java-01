@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Practice07",
+      "request": "launch",
+      "mainClass": "practice.Practice07",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice06",
+      "request": "launch",
+      "mainClass": "practice.Practice06",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice05",
+      "request": "launch",
+      "mainClass": "practice.Practice05",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch Practice04",
       "request": "launch",
       "mainClass": "practice.Practice04",
