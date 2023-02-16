@@ -4,6 +4,7 @@ import javax.swing.*;
 
 public class JCheckBoxEx extends JFrame {
 
+  private int sum = 0;
   private JCheckBox fruits[] = new JCheckBox[3];
   private String fruitNames[] = { "사과", "딸기", "체리" };
   private JLabel sumLabel = new JLabel("합계 : 0");
@@ -24,8 +25,6 @@ public class JCheckBoxEx extends JFrame {
   }
 
   class MyItemListener implements ItemListener {
-
-    private int sum = 0;
 
     @Override
     public void itemStateChanged(ItemEvent e) {
