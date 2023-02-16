@@ -6,6 +6,76 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch JListEx",
+      "request": "launch",
+      "mainClass": "JListEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch JTextFieldEx",
+      "request": "launch",
+      "mainClass": "JTextFieldEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch JRadioButtonEx",
+      "request": "launch",
+      "mainClass": "JRadioButtonEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch RadioBtnEx",
+      "request": "launch",
+      "mainClass": "RadioBtnEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch JCheckBoxEx",
+      "request": "launch",
+      "mainClass": "JCheckBoxEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch DreamCar",
+      "request": "launch",
+      "mainClass": "src.DreamCar",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch DreamCar",
+      "request": "launch",
+      "mainClass": "DreamCar",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch MyFavoriteStar",
+      "request": "launch",
+      "mainClass": "MyFavoriteStar",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch JLabelEx",
+      "request": "launch",
+      "mainClass": "JLabelEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch JComponentEx",
+      "request": "launch",
+      "mainClass": "JComponentEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch Practice07",
       "request": "launch",
       "mainClass": "practice.Practice07",
