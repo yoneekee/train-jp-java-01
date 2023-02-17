@@ -6,6 +6,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Practice01",
+      "request": "launch",
+      "mainClass": "ch12.practice.Practice01",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Practice02",
+      "request": "launch",
+      "mainClass": "ch12.practice.Practice02",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch DrawLineEx",
+      "request": "launch",
+      "mainClass": "DrawLineEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch PaintImgEx",
+      "request": "launch",
+      "mainClass": "PaintImgEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch PaintFontEx",
+      "request": "launch",
+      "mainClass": "PaintFontEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch PaintPanelEx",
+      "request": "launch",
+      "mainClass": "PaintPanelEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch Practice09",
       "request": "launch",
       "mainClass": "practice.Practice09",
