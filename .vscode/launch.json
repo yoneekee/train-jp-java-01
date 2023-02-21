@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch TimerThreadRunnableEx",
+      "request": "launch",
+      "mainClass": "TimerThreadRunnableEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch Coin",
+      "request": "launch",
+      "mainClass": "Coin",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch BlockGame",
       "request": "launch",
       "mainClass": "BlockGame",
