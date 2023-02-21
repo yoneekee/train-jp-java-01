@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch RandomCircle",
+      "request": "launch",
+      "mainClass": "RandomCircle",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch DigitalClock",
+      "request": "launch",
+      "mainClass": "DigitalClock",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch DigitalClock",
+      "request": "launch",
+      "mainClass": "practice.DigitalClock",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch ThreadFinishEx",
+      "request": "launch",
+      "mainClass": "ThreadFinishEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch TimerThreadInterrupt",
       "request": "launch",
       "mainClass": "TimerThreadInterrupt",
