@@ -9,6 +9,8 @@ class FlickeringLabel extends JLabel implements Runnable {
     super(txt);
     this.delay = delay;
     this.setOpaque(true);
+    Thread th = new Thread(this);
+    th.start();
   }
 
   @Override
@@ -40,11 +42,17 @@ public class FlickeringLabelEx extends JFrame {
     contentPane.setLayout(new FlowLayout());
 
     FlickeringLabel fLabel = new FlickeringLabel("Flicker", 1000);
-    fLabel.setFont(new Font("맑은 고딕", Font.BOLD, 120));
+    FlickeringLabel fLabel2 = new FlickeringLabel("Flicker", 300);
+    JLabel label = new JLabel();
+    label.setText("not flickering");
     contentPane.add(fLabel);
+    contentPane.add(label);
+    contentPane.add(fLabel2);
 
-    Thread th = new Thread(fLabel);
-    th.start();
+    // Thread th = new Thread(fLabel);
+    // th.start();
+    // Thread th2 = new Thread(fLabel2);
+    // th2.start();
 
     this.setSize(500, 500);
     this.setVisible(true);
