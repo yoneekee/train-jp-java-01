@@ -7,47 +7,50 @@ public class GamePanel extends JPanel implements Runnable {
   Image bg = new ImageIcon("coin/images/bg.jpg").getImage();
   Image coin = new ImageIcon("coin/images/dollar.png").getImage();
   Image mario = new ImageIcon("coin/images/super-mario.png").getImage();
-
+  Image speedUp = new ImageIcon("coin/images/arrows.png").getImage();
   public boolean isLeft, isRight, isUp, isDown;
   public int marioX = 500;
   public int marioY = 500;
   public int coinX = 300;
   public int coinY = 300;
+
+  public int coinTx = 300;
+  public int coinTy = 300;
+
   public int speedX = 10;
   public int speedY = 10;
-  public int score = 0;
-  public boolean isStart = true;
+
+  // item
+  public double t = 0;
+  public int loadX = (int) (Math.random() * 800 + 100);
+  public int radius = (int) (Math.random() * 50 + 50);
+
+  public int speedUpX = 10;
+  public int speedUpY = 10;
+
+  public boolean isItem = true;
+
+  // item end
 
   public Thread th;
-  public Thread th2;
+  public Thread th02;
+  public RandomThread randomThread = new RandomThread();
+  public int score = 0;
 
   public GamePanel() {
     th = new Thread(this);
-    th2 =
-      new Thread(
-        new Runnable() {
-          public void run() {
-            while (true) {
-              try {
-                Thread.sleep(3000);
-              } catch (InterruptedException e) {
-                e.printStackTrace();
-              }
-              coinRandomlyMove();
-            }
-          }
-        }
-      );
-    th.start(); // 이게 있어야 스레드가 구동이 됨
-    th2.start();
+    th.start();
 
+    th02 = new Thread(randomThread);
+    th02.start();
     this.setPreferredSize(new Dimension(1280, 720));
     this.addKeyListener(
         new KeyListener() {
+          @Override
+          public void keyTyped(KeyEvent e) {}
+
+          @Override
           public void keyPressed(KeyEvent e) {
-            if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-              isStart = false;
-            }
             if (e.getKeyCode() == KeyEvent.VK_LEFT) {
               isLeft = true;
             } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
@@ -59,6 +62,7 @@ public class GamePanel extends JPanel implements Runnable {
             }
           }
 
+          @Override
           public void keyReleased(KeyEvent e) {
             if (e.getKeyCode() == KeyEvent.VK_LEFT) {
               isLeft = false;
@@ -70,13 +74,22 @@ public class GamePanel extends JPanel implements Runnable {
               isDown = false;
             }
           }
-
-          public void keyTyped(KeyEvent e) {}
         }
       );
+    this.setFocusable(true);
+    this.requestFocus();
+  }
 
-    this.setFocusable(true); // 이게 있어야 키보드 입력 이벤트 가능
-    this.requestFocus(); // 이것도 마찬가지
+  public void paintComponent(Graphics g) {
+    super.paintComponent(g);
+    // 그림 그리는 곳....
+    g.drawImage(bg, 0, 0, null);
+    g.drawImage(coin, coinX, coinY, null);
+    g.drawImage(mario, marioX, marioY, null);
+    g.drawImage(speedUp, speedUpX, speedUpY, null);
+    g.setColor(Color.WHITE);
+    g.setFont(new Font("맑은 고딕", Font.BOLD, 24));
+    g.drawString("SCORE : " + score, 100, 100);
   }
 
   @Override
@@ -84,35 +97,15 @@ public class GamePanel extends JPanel implements Runnable {
     while (true) {
       try {
         Thread.sleep(20);
-      } catch (Exception e) {
-        e.getStackTrace();
+      } catch (InterruptedException e) {
+        e.printStackTrace();
       }
       repaint();
-      checkCoin();
       marioMove();
+      checkCoin();
+      itemCheck();
+      speedUpMove();
     }
-  }
-
-  public void paintComponent(Graphics g) {
-    if (isStart) {
-      g.drawImage(bg, 0, 0, null);
-      g.setColor(Color.BLACK);
-      g.drawRect(0, 0, 618, 900);
-      g.setColor(Color.WHITE);
-      g.setFont(new Font("맑은 고딕", Font.BOLD, 32));
-      g.drawString("MARIO COIN GAME", 60, 450);
-      g.setFont(new Font("맑은 고딕", Font.BOLD, 24));
-      g.drawString("PRESS ENTER FOR GAME TO START ", 60, 550);
-    } else {
-      g.drawImage(bg, 0, 0, null);
-      g.drawImage(coin, coinX, coinY, null);
-      g.drawImage(mario, marioX, marioY, null);
-      g.setColor(Color.WHITE);
-      g.setFont(new Font("맑은 고딕", Font.BOLD, 16));
-      g.drawString("SCORE : " + score, 20, 20);
-    }
-    // 그림 그리는 곳
-
   }
 
   public void marioMove() {
@@ -128,23 +121,75 @@ public class GamePanel extends JPanel implements Runnable {
     if (isDown) {
       marioY += speedY;
     }
-  }
-
-  public void checkCoin() {
-    double distX = (coinX - 16) - (marioX - 16);
-    double distY = (coinY - 16) - (marioY - 16);
-    double dist = Math.sqrt(distX * distX + distY * distY);
-
-    if (dist < 32) {
-      coinX = (int) (Math.random() * 1000);
-      coinY = (int) (Math.random() * 700);
-      score += 20;
+    if (marioX < -32) {
+      marioX = 1280;
+    }
+    if (marioX > 1280 + 32) {
+      marioX = -32;
+    }
+    if (marioY < -32) {
+      marioY = 720;
+    }
+    if (marioY > 720 + 32) {
+      marioY = -32;
     }
   }
 
-  public void coinRandomlyMove() {
-    //System.out.println("coin randomly move");
-    coinX = (int) (Math.random() * 1000);
-    coinY = (int) (Math.random() * 700);
+  public void speedUpMove() {
+    if (isItem) {
+      t += 0.05;
+      speedUpX = loadX + (int) (Math.sin(t) * radius);
+      speedUpY += 5;
+      if (speedUpY > 800) {
+        speedUpY = -100;
+        isItem = false;
+      }
+    }
+    if (Math.random() < 0.005 && !isItem) {
+      isItem = true;
+      loadX = (int) (Math.random() * 800 + 100);
+      radius = (int) (Math.random() * 50 + 50);
+    }
+  }
+
+  public void checkCoin() {
+    double distX = coinX - marioX;
+    double distY = coinY - marioY;
+    double dist = Math.sqrt(distX * distX + distY * distY);
+    coinX += (coinTx - coinX) * 0.15;
+    coinY += (coinTy - coinY) * 0.15;
+    if (dist < 32) {
+      coinTx = (int) (Math.random() * 1280);
+      coinTy = (int) (Math.random() * 720);
+      score++;
+    }
+  }
+
+  public void itemCheck() {
+    double distX = speedUpX - marioX;
+    double distY = speedUpY - marioY;
+    double dist = Math.sqrt(distX * distX + distY * distY);
+    if (dist < 32) {
+      speedX += 5;
+      speedY += 5;
+      speedUpY = -100;
+      isItem = false;
+    }
+  }
+
+  class RandomThread implements Runnable {
+
+    @Override
+    public void run() {
+      while (true) {
+        coinTx = (int) (Math.random() * 1280);
+        coinTy = (int) (Math.random() * 720);
+        try {
+          Thread.sleep(3000);
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }
   }
 }

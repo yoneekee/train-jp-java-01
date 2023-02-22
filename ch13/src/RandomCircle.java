@@ -7,22 +7,6 @@ class CirclePanel extends JPanel implements Runnable {
   private int x = 100;
   private int y = 100;
 
-  public int getX() {
-    return this.x;
-  }
-
-  public void setX(int x) {
-    this.x = x;
-  }
-
-  public int getY() {
-    return this.y;
-  }
-
-  public void setY(int y) {
-    this.y = y;
-  }
-
   CirclePanel() {
     Thread th = new Thread(this);
     this.addMouseListener(
@@ -63,6 +47,7 @@ public class RandomCircle extends JFrame {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     CirclePanel cp = new CirclePanel();
     this.setContentPane(cp);
+    cp.setForeground(Color.RED);
 
     this.setSize(500, 500);
     this.setVisible(true);

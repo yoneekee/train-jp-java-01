@@ -6,6 +6,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch JFileChooserEx",
+      "request": "launch",
+      "mainClass": "JFileChooserEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch DialogEx",
+      "request": "launch",
+      "mainClass": "DialogEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch MenuActionEventEx",
+      "request": "launch",
+      "mainClass": "MenuActionEventEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch MenuEx",
+      "request": "launch",
+      "mainClass": "MenuEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
+      "name": "Launch ShakingEx",
+      "request": "launch",
+      "mainClass": "ShakingEx",
+      "projectName": "java-lecture-01_1ebe60bc"
+    },
+    {
+      "type": "java",
       "name": "Launch RandomCircle",
       "request": "launch",
       "mainClass": "RandomCircle",
